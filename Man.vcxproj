@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>HelpTip</ProjectName>
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\Man.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\Man.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\Man.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\Man.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Release\Man.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\Man.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\Man.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\Man.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="About.cpp" />
+    <ClCompile Include="Advertise.cpp" />
+    <ClCompile Include="BCMenu.cpp" />
+    <ClCompile Include="CREDITSTATIC.CPP" />
+    <ClCompile Include="DownloadAddress.cpp" />
+    <ClCompile Include="FlatEdit.cpp" />
+    <ClCompile Include="HelpTip.cpp" />
+    <ClCompile Include="HelpTipDlg.cpp" />
+    <ClCompile Include="HyperLink.cpp" />
+    <ClCompile Include="Ntray.cpp" />
+    <ClCompile Include="SetRing.cpp" />
+    <ClCompile Include="Splash.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="TransparentWnd.cpp" />
+    <ClCompile Include="XInfoTip.cpp" />
+    <ClCompile Include="xShadeButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="HelpTip.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="About.h" />
+    <ClInclude Include="Advertise.h" />
+    <ClInclude Include="BCMenu.h" />
+    <ClInclude Include="CREDITSTATIC.H" />
+    <ClInclude Include="DownloadAddress.h" />
+    <ClInclude Include="FlatEdit.h" />
+    <ClInclude Include="HelpTip.h" />
+    <ClInclude Include="HelpTipDlg.h" />
+    <ClInclude Include="HyperLink.h" />
+    <ClInclude Include="Ntray.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SetRing.h" />
+    <ClInclude Include="Splash.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TransparentWnd.h" />
+    <ClInclude Include="XInfoTip.h" />
+    <ClInclude Include="xShadeButton.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\120.bmp" />
+    <CustomBuild Include="res\ANGRY1.bmp" />
+    <CustomBuild Include="res\ANGRY2.bmp" />
+    <CustomBuild Include="res\ANGRY3.bmp" />
+    <CustomBuild Include="res\angry4.bmp" />
+    <CustomBuild Include="res\b32.ico" />
+    <CustomBuild Include="res\check.bmp" />
+    <CustomBuild Include="res\close.bmp" />
+    <CustomBuild Include="res\drop.cur" />
+    <CustomBuild Include="res\FUNK1.bmp" />
+    <CustomBuild Include="res\FUNK2.bmp" />
+    <CustomBuild Include="res\FUNK3.bmp" />
+    <CustomBuild Include="res\FUNK4.bmp" />
+    <CustomBuild Include="res\hand.cur" />
+    <CustomBuild Include="res\HelpTip.ico" />
+    <CustomBuild Include="res\HelpTip.rc2">
+      <FileType>RC</FileType>
+    </CustomBuild>
+    <CustomBuild Include="res\icon1.ico" />
+    <CustomBuild Include="res\IDLE1.bmp" />
+    <CustomBuild Include="res\idle10001.bmp" />
+    <CustomBuild Include="res\idle10002.bmp" />
+    <CustomBuild Include="res\idle10003.bmp" />
+    <CustomBuild Include="res\idle10004.bmp" />
+    <CustomBuild Include="res\IDLE2.bmp" />
+    <CustomBuild Include="res\IDLE3.bmp" />
+    <CustomBuild Include="res\IDLE4.bmp" />
+    <CustomBuild Include="res\IDLE5.bmp" />
+    <CustomBuild Include="res\IDLE6.bmp" />
+    <CustomBuild Include="res\IDLE7.bmp" />
+    <CustomBuild Include="res\IDLE8.bmp" />
+    <CustomBuild Include="res\open1.bmp" />
+    <CustomBuild Include="res\RUN1.bmp" />
+    <CustomBuild Include="res\RUN10.bmp" />
+    <CustomBuild Include="res\RUN2.bmp" />
+    <CustomBuild Include="res\RUN3.bmp" />
+    <CustomBuild Include="res\RUN4.bmp" />
+    <CustomBuild Include="res\RUN5.bmp" />
+    <CustomBuild Include="res\RUN6.bmp" />
+    <CustomBuild Include="res\RUN7.bmp" />
+    <CustomBuild Include="res\RUN8.bmp" />
+    <CustomBuild Include="res\RUN9.bmp" />
+    <CustomBuild Include="res\sling10001.bmp" />
+    <CustomBuild Include="res\sling10002.bmp" />
+    <CustomBuild Include="res\sling10003.bmp" />
+    <CustomBuild Include="res\sling10004.bmp" />
+    <CustomBuild Include="res\sling10005.bmp" />
+    <CustomBuild Include="res\sling10006.bmp" />
+    <CustomBuild Include="res\sling10007.bmp" />
+    <CustomBuild Include="res\sling10008.bmp" />
+    <CustomBuild Include="res\transform10001.bmp" />
+    <CustomBuild Include="res\transform10002.bmp" />
+    <CustomBuild Include="res\transform10003.bmp" />
+    <CustomBuild Include="res\transform10004.bmp" />
+    <CustomBuild Include="res\transform10005.bmp" />
+    <CustomBuild Include="res\transform10006.bmp" />
+    <CustomBuild Include="res\transform10007.bmp" />
+    <CustomBuild Include="res\transform10008.bmp" />
+    <CustomBuild Include="res\transform10009.bmp" />
+    <CustomBuild Include="res\transform10010.bmp" />
+    <CustomBuild Include="res\transform10011.bmp" />
+    <CustomBuild Include="res\transform10012.bmp" />
+    <CustomBuild Include="res\transform10013.bmp" />
+    <CustomBuild Include="res\TrayIcon.ico" />
+    <CustomBuild Include="res\WALK1.bmp" />
+    <CustomBuild Include="res\WALK10.bmp" />
+    <CustomBuild Include="res\walk10001.bmp" />
+    <CustomBuild Include="res\walk10002.bmp" />
+    <CustomBuild Include="res\walk10003.bmp" />
+    <CustomBuild Include="res\walk10004.bmp" />
+    <CustomBuild Include="res\walk10005.bmp" />
+    <CustomBuild Include="res\walk10006.bmp" />
+    <CustomBuild Include="res\walk10007.bmp" />
+    <CustomBuild Include="res\walk10008.bmp" />
+    <CustomBuild Include="res\walk10009.bmp" />
+    <CustomBuild Include="res\walk10010.bmp" />
+    <CustomBuild Include="res\walk10011.bmp" />
+    <CustomBuild Include="res\walk10012.bmp" />
+    <CustomBuild Include="res\walk10013.bmp" />
+    <CustomBuild Include="res\walk10014.bmp" />
+    <CustomBuild Include="res\walk10015.bmp" />
+    <CustomBuild Include="res\walk10016.bmp" />
+    <CustomBuild Include="res\walk10017.bmp" />
+    <CustomBuild Include="res\walk10018.bmp" />
+    <CustomBuild Include="res\walk10019.bmp" />
+    <CustomBuild Include="res\walk10020.bmp" />
+    <CustomBuild Include="res\walk10021.bmp" />
+    <CustomBuild Include="res\walk10022.bmp" />
+    <CustomBuild Include="res\walk10023.bmp" />
+    <CustomBuild Include="res\walk10024.bmp" />
+    <CustomBuild Include="res\WALK2.bmp" />
+    <CustomBuild Include="res\WALK3.bmp" />
+    <CustomBuild Include="res\WALK4.bmp" />
+    <CustomBuild Include="res\WALK5.bmp" />
+    <CustomBuild Include="res\WALK6.bmp" />
+    <CustomBuild Include="res\WALK7.bmp" />
+    <CustomBuild Include="res\WALK8.bmp" />
+    <CustomBuild Include="res\WALK9.bmp" />
+    <CustomBuild Include="res\IDR_WAVE.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
